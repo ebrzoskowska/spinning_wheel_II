@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Graduate&family=Roboto:wght@100&display=swap');
+/* 
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Graduate', cursive;
+font-family: 'Roboto', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+i {
+  font-size: 50px;
+  color: #fff;
+}
+
+/* desktop main navigation */
+.main-nav {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  color: #fff; 
+}
+
+.main-nav__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+}
+
+.main-nav__logo {
+  width: 70%;
+}
+
+.main-nav__right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav__item {
+  cursor: pointer;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  transition: 500ms ease all;
+  /* font-family: 'Alfa Slab One', cursive; */
+  font-family: 'Graduate', cursive;
+}
+
+.main-nav__item:hover {
+  color: #B2B2B2;
+}
+
+
+/* mobile main navigation */
+
+.mobile-nav {
+  display: flex;
+}
+
+.mobile-menu {
+  z-index: 2;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  transition: 1000ms ease all;
+}
+
+.mobile-menu li {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin-left: 0;
+  padding: 20px 40px;
+}
+
+.mobile-menu-btn {
+  z-index: 3;
+  position: fixed;
+  top: 32px;
+  right: 20px;
+  font-size: 32px;
+  transition: 1000ms ease all;
+}
+
+.active-menu-btn {
+  transform: rotate(180deg);
+}
+
+/* general styles */
+.display-none {
+  display: none;
+}
+
+.dark-navy-background {
+  background-color: #131E3A;
+}
+
+.navy-background {
+  background-color: #27375A;
+}
+
+.yellow-background {
+  background-color: #FFD400;
+}
+
+.red-background {
+  background-color: #FC0328;
+}
+
+.grey-background {
+  background-color: #B2B2B2;
+}
+
+.grey-background {
+  background-color: #2D98FA;
+}
+
+/* animation */
+@keyframes slide-in {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+.slide-in {
+  animation: slide-in 1000ms ease;
+  display: inherit;
+}
+
+.slide-out {
+  animation: slide-out 1000ms ease;
+}
+
+/* media queries */
+@media (max-width: 900px) {
+  .main-nav__item {
+    font-size: 0.9em;
+  }  
+} 
+ 
+
+@media (max-width: 750px) {
+  .main-nav__right {
+    display: none;
+  }
+
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+}
+
