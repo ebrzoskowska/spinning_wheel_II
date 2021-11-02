@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Speening wheel</title>
-  <meta name="description" content="Awesome speening wheel using HTML, CSS & JavaScript.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spinnig wheel</title>
+    <meta name="description" content="Awesome spinning wheel using HTML, CSS & JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- styling & icons --> 
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/0e9e91978d.js" crossorigin="anonymous"></script>
+  <!-- styling & icons -->     
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-</head>
-<body>
 
-  <!-- <header>
-    <button class="nav__hamburger" id="nav__hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
-    <img class="nav__logo" src="images/logo.png">
-    <nav>
-      <ul class="nav__links" id="nav__links">
-        <li><a href="https://www.allstarslots.com/about-us" target="_blank">about</a></li>
-        <li><a href="https://www.allstarslots.com/cashier" target="_blank">services</a></li>
-        <li><a href="https://www.allstarslots.com/games" target="_blank">games</a></li>
+<!-- mobile navigation -->
+    <div class="main-nav__mobile">
+      <i class="fas fa-bars main-nav__btn"></i>
+      <ul class="main-nav__mobile-list slide-out display-none">
+        <li class="main-nav__mobile-item">Home</li>
+        <li class="main-nav__mobile-item">Products</li>
+        <li class="main-nav__mobile-item">Contact Us</li>
+        <li class="main-nav__mobile-item">About</li>
       </ul>
-    </nav>
-    <button class="nav__spin-btn yellow-btn" id="pop-up-btn__open">Spin the wheel</button>
-  </header> -->
+    </div>
 
-  <div class="mobile-nav">
-    <i class="fas fa-bars mobile-menu-btn"></i>
-    <ul class="mobile-menu slide-out display-none">
-      <li>Home</li>
-      <li>Products</li>
-      <li>Contact Us</li>
-      <li>About</li>
-    </ul>
-  </div>
-  
+<!-- desktop navigation -->
   <nav class="main-nav dark-navy-background">
     <div class="main-nav__wrap">
       <a href="#">
@@ -46,18 +38,26 @@
       </a>
       <div class="main-nav__right">
         <ul class="main-nav__list">
-          <li class="main-nav__item">Home</li>
-          <li class="main-nav__item">Products</li>
-          <li class="main-nav__item">Games</li>
-          <li class="main-nav__item">About</li>
-          <li class="main-nav__item">Contact Us</li>
+          <li class="main-nav__item"><a href="https://www.allstarslots.com/" target="_blank">Home</a>/li>
+          <li class="main-nav__item"><a href="https://www.allstarslots.com/promotions" target="_blank">Products</a></li>
+          <li class="main-nav__item"><a href="https://www.allstarslots.com/games" target="_blank">Games</a></li>
+          <li class="main-nav__item"><a href="https://www.allstarslots.com/about-us" target="_blank">About</a></li>
+          <li class="main-nav__item"><a href="https://www.allstarslots.com/about-us/contact-us" target="_blank">Contact Us</a></li>
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> 
 
-
-
-  <script src="main.js" charset="utf-8"></script>
-</body>
+<!-- wheel container with wheel and marker   -->
+<div class="wheel__container grey-background">
+  <div class="wheel__wrapper">
+    <img class="wheel__marker" src="images/marker.png" />
+    <img class="wheel__img" src="images/speen-wheel.png" />
+    <button class="nav__spin-btn yellow-btn" id="pop-up-btn__open">Spin the wheel</button>
+    <div class="wheel__score">-</div>    
+  </div>  
+</div>  
+ 
+    <script src="main.js"></script>
+  </body>
 </html>
