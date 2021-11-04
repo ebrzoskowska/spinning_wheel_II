@@ -27,7 +27,7 @@ window.addEventListener("resize", () => {
 
 	
   const wheel = document.querySelector('.wheel__img');
-  const spin_btn = document.querySelector('.nav__spin-btn');
+  const spin_btn = document.querySelector('.wheel__spin-btn');
 	const score = document.querySelector('.wheel__score');
 
 // set the initial deg and also value of one small wheel part in deg 360/24 parts = 15 deg

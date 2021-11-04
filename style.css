@@ -56,9 +56,9 @@ i {
 }
 
 .main-nav__item a {
-  font-family: 'Graduate', cursive;
   text-decoration: none;
   color: #fff;
+  font-size: 1.3em;
 }
 
 .main-nav__item a:hover {
@@ -76,18 +76,23 @@ i {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: RGBA(39,55,90,0.9);
   justify-content: center;
   transition: 1000ms ease all;
 }
 
 .main-nav__mobile-item {
   font-size: 24px;
-  color: #fff;
-  text-align: center;
+
   margin-left: 0;
   padding: 20px 40px;
 }
+
+.main-nav__mobile-item a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}  
 
 .main-nav__btn {
   z-index: 3;
@@ -115,7 +120,6 @@ i {
 .wheel__wrapper {
   width: 350px;
   height: 350px;
-  margin: 0 auto;
   position: relative;
 	opacity: .99;
 }
@@ -132,6 +136,10 @@ i {
   height: 100%;
 }
 
+.wheel__btn-wrap {
+  margin: 20px;
+}
+
 .wheel__score {
   display: flex;
   align-items: center;
@@ -141,13 +149,9 @@ i {
   border: 1px solid #131e3a;
   border-radius: 20px; 
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5em;
   margin: 10px auto;
 }
-
-
-
-
 
 /* general styles */
 .display-none {
@@ -179,13 +183,39 @@ i {
 }
 
 .yellow-btn {
-	background-color: rgba(255,212,0,1);
-	transition: all 0.3s ease 0s;
-	border: none;
-	cursor: pointer;
-	border-radius: 30px;
-  padding: 5px 50px 5px 50px;
-	color: #131e3a;
+  font-size: 1.2em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  width: 200px;
+  height: 50px;
+  outline: 0;
+  border: 1px solid #131e3a;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.yellow-btn:after {
+  content: " ";
+  background-color: rgba(255,212,0,1);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 20px;
+}
+
+.yellow-btn:hover:after {
+  top: 0px;
+  left: 0px;
 }
 
 /*sliding animation & sliding class */
@@ -215,7 +245,6 @@ i {
   animation: slide-out 1000ms ease;
 }
 
-
 /* blur animation & blur class */
 @keyframes blur {
   0% {
@@ -234,7 +263,6 @@ i {
 }
 
 /*media queries*/
-
 @media (min-width: 750px) {
   .main-nav__btn {
     display: none;
@@ -243,4 +271,18 @@ i {
   .main-nav__list {
     display: flex;
   }
+}
+
+@media (max-width: 550px) {
+  .wheel__container {
+    flex-direction: column;
+    justify-content: flex-end;
+  }  
+}
+
+@media (max-width: 350px) {
+  .wheel__wrapper {
+    width: 320px;
+    height: 320px;
+  }  
 }
